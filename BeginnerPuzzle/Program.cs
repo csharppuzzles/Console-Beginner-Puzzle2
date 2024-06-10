@@ -25,14 +25,26 @@ static void ExampleA()
 // Use string.Join() to create the final sentence "Your full name is {firstName} {secondName}"
 // Use multiple string.Joins to create the final sentence "Name: {secondName}, {firstName}"
 // Remember to have spaces between the strings when you join them.
-/*
+
 static void PuzzleA()
 {
     Console.WriteLine("\nPuzzle A");
     Console.WriteLine("~~~~~~~~~");
 
+    Console.WriteLine("\nWhat's your first name, baby?: ");
+    string? firstName = Console.ReadLine();
+
+    Console.WriteLine("\nWhat's your second name?: ");
+    string? secondName = Console.ReadLine();
+
+    string message = string.Join(" ", "Your full name is", firstName, secondName);
+
+    string name = string.Join(", ", secondName, firstName);
+    string message2 = string.Join(" ", "Name: ", name);
+
+    Console.WriteLine(message);
+    Console.WriteLine(message2);
 }
-*/
 
 
 static void ExampleB()
@@ -52,14 +64,19 @@ static void ExampleB()
 // Write a program that asks the user to "Input a sentence with the word "and" in it: ".
 // Replace every occurence of the word "and" with the symbol &
 // Remember to escape the backslashes around "and" or use verbatium.
-/*
+
 static void PuzzleB()
 {
     Console.WriteLine("\nPuzzle B");
     Console.WriteLine("~~~~~~~~~");
 
+    Console.WriteLine("\n Input a sentence with the word \"and\" in it: ");
+    string? input = Console.ReadLine();
+
+    string result = input.Replace("and", "&");
+    Console.WriteLine(result);
 }
-*/
+
 
 static void ExampleC()
 {
@@ -92,14 +109,25 @@ static void ExampleC()
 // Don't worry if the user enters a word that is not in the sentence, we have not covered loops or error catching yet.
 // Just to be clear, the program WILL crash if the user enters a word not in the sentence. That's ok for now.
 // Don't worry about green squiggly lines, we have not covered null checks yet.
-/*
 static void PuzzleC()
 {
     Console.WriteLine("\nPuzzle C");
     Console.WriteLine("~~~~~~~~~");
 
+    Console.WriteLine("\n Please enter a sentence: ");
+    string? sentence = Console.ReadLine();
+
+    Console.WriteLine("Which word will we replace?: ");
+    string? word1 = Console.ReadLine();
+
+    Console.WriteLine("Replace it with what?: ");
+    string? word2 = Console.ReadLine();
+
+    string output = sentence.Replace(word1, word2);
+
+    Console.WriteLine(output);
 }
-*/
+
 
 
 // Run the puzzles
